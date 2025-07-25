@@ -9,7 +9,7 @@ const manifestForPlugIn = {
   manifest:{
     name:"Tiempo de Handball - Tu contador de confianza",
     short_name:"Tiempo de Handball",
-    description:"que la division de gastos, no sea un problema 📈💰📊.",
+    description:"lleva tus partidos de handball al siguiente nivel con nuestro contador de goles y tiempo, personalizable y fácil de usar.",
     icons:[{
       src: '/android-chrome-192x192.png',
       sizes:'192x192',
