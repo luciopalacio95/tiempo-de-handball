@@ -162,7 +162,7 @@ export default function Contador(){
                      ) :(
                     <div className="flex-basis-1/4">
                         <input type="text" name="visitante" autoComplete="off" placeholder={intl.formatMessage({ id: "general.visitante" })} value={visitante} onChange={(e) => setVisitante(e.target.value)} className="bg-plate uppercase text-center text-white text-base sm:text-4xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-grey dark:focus:ring-gray-100 dark:focus:border-gray-100" />
-                        <button onClick={() => setVisitanteGoles(visitanteGoles + 1)} className="bg-white rounded-xl text-center text-gray-900 mt-6 text-4xl sm:text-8xlfont-extrabold focus:ring-blue-500 focus:border-blue-500 block m-auto w-24 sm:w-full p-2.5 dark:bg-white">{visitanteGoles}</button>
+                        <button onClick={() => setVisitanteGoles(visitanteGoles + 1)} className="bg-white rounded-xl text-center text-gray-900 mt-6 text-4xl sm:text-8xl font-extrabold focus:ring-blue-500 focus:border-blue-500 block m-auto w-24 sm:w-full p-2.5 dark:bg-white">{visitanteGoles}</button>
                         <div className="flex mt-2 flex-row items-center justify-between">
                             <button onClick={() => setVisitanteGoles(visitanteGoles > 0 ? visitanteGoles - 1 : 0)} className="bg-[#E91E63] rounded-full text-center text-gray-900 mt-6 text-4xl sm:text-6xl font-extrabold block w-16 sm:w-20 p-2.5"> - </button>
                             <button onClick={() => setVisitanteGoles(visitanteGoles + 1)} className="bg-[#03A9F4] rounded-full text-center text-gray-900 mt-6 text-4xl sm:text-6xl font-extrabold block w-16 sm:w-20 p-2.5"> + </button>
