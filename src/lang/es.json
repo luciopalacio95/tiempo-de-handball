@@ -1,19 +1,6 @@
 {    
-    "general.titulo_body": "Todos sabemos que las cuentas claras, hacen las relaciones duraderas",
-    "general.pregunta_cuanto": "¿Cuánto puso cada uno/a?",
-    "general.nombre": "Nombre",
-    "general.cuanto": "¿Cuánto puso?",
-    "general.calcular": "calcular",
-    "general.calcular_otro": "Hacer otro calculo",
-    "general.calcular_aviso": "Debe haber al menos 2 participantes.",
-    "general.en_total": "En total gastaron",
-    "general.cada_uno": "cada uno/a",
-    "general.saldo": "Ajustes de Saldos",
-    "general.enviar_por": "Enviar por:",
-    "share.titulo": "¡Hola, este es el ajuste de saldos!",
-    "share.cortesia": "Cortesía de",
-    "share.puso": "- *{valor1}* puso *${valor2}*",
-    "share.debe_pagar": "*{valor1}* debe pagar *${valor2}* a *{valor3}*"
-
-
+    "general.visitante": "Visitante",
+    "general.local": "Local",
+    "general.tiempo": "Tiempo",
+    "general.resetear": "Resetear"
 }

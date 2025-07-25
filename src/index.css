@@ -17,6 +17,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body{
+  font-family: 'Roboto', sans-serif;
+  background-image: url('/src/assets/images/fondo-pelota.jpg');
+  background-color: rgba(255,255,255,0.5);
+  background-blend-mode: luminosity;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+
 .btn-dark {
   background-color: #212529;
   color: #fff;
