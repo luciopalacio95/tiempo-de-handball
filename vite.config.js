@@ -5,10 +5,10 @@ import { VitePWA } from "vite-plugin-pwa";
 // you can copy the base structure of manifest object.
 const manifestForPlugIn = {
   registerType:'prompt',
-  includeAssests:['favicon.ico', "apple-touc-icon.png", "masked-icon.svg"],
+  includeAssests:['favicon.ico', "apple-touc-icon.png", "maskable_icon.png"],
   manifest:{
-    name:"Cuentas Claras - Divide los Gastos con tus Amigos",
-    short_name:"Cuentas Claras",
+    name:"Tiempo de Handball - Tu contador de confianza",
+    short_name:"Tiempo de Handball",
     description:"que la division de gastos, no sea un problema 📈💰📊.",
     icons:[{
       src: '/android-chrome-192x192.png',
@@ -35,8 +35,8 @@ const manifestForPlugIn = {
       purpose:'any maskable',
     }
   ],
-  theme_color:'#f8f9fa',
-  background_color:'#f8f9fa',
+  theme_color:'#4b5563',
+  background_color:'#4b5563',
   display:"standalone",
   scope:'/',
   start_url:"/",
