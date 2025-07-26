@@ -2,6 +2,8 @@
     "general.visitante": "Visitor",
     "general.local": "Home",
     "general.tiempo": "Time",
-    "general.resetear": "Reset"
-
+    "general.resetear": "Reset",
+    "general.botonA": "Press the A key to add 1 point.",
+    "general.botonG": "Press the G key to add 1 point.",
+    "general.botonT": "Press the T key to start/pause the timer."
 }

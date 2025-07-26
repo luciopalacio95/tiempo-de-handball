@@ -2,5 +2,8 @@
     "general.visitante": "Visitante",
     "general.local": "Local",
     "general.tiempo": "Tiempo",
-    "general.resetear": "Resetear"
+    "general.resetear": "Resetear",
+    "general.botonA": "Presiona la tecla A para sumar 1 punto.",
+    "general.botonG": "Presiona la tecla G para sumar 1 punto.",
+    "general.botonT": "Presiona la tecla T para iniciar/pausar el tiempo."
 }
