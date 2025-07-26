@@ -7,6 +7,8 @@ import editar from '../../assets/images/editar.png';
 import play from '../../assets/images/boton-de-play.png';
 import pausa from '../../assets/images/boton-de-pausa.png';
 import refresh from '../../assets/images/refresh.png';
+import sirenaOp1MP3 from '../../assets/audio/airhorn-fx-op1.mp3';
+import sirenaOp2MP3 from '../../assets/audio/airhorn-fx-op2.mp3';
 
 export default function Contador(){
 
@@ -15,7 +17,7 @@ export default function Contador(){
     const [visitanteGoles, setVisitanteGoles] = useState(0); 
     const [local, setLocal] = useState("");
     const [localGoles, setLocalGoles] = useState(0);
-    const [cuentaRegresiva, setCuentaRegresiva] = useState(Number(localStorage.getItem('duracion')) || Number(30 * 60));
+    const [cuentaRegresiva, setCuentaRegresiva] = useState(Number(localStorage.getItem('duracion')) || Number(6));
     const [activo, setActivo] = useState(false);
     const intervaloRef = useRef(null);
 
@@ -85,6 +87,17 @@ export default function Contador(){
         }, 1000);
     };
 
+  const alLlegarACero = () => {
+    console.log('⏰ ¡Tiempo agotado! Ejecutando acción...');
+    // Colocá acá la acción que querés disparar
+     // 🔊 Reproducir sonido
+    const audio = new Audio(sirenaOp2MP3); // ruta relativa desde public/
+    audio.play().catch((error) => {
+        console.warn('No se pudo reproducir el audio:', error);
+    });
+  };
+
+
     const pausarCuenta = () => {
         clearInterval(intervaloRef.current);
         intervaloRef.current = null;
@@ -100,6 +113,7 @@ export default function Contador(){
                 clearInterval(intervaloRef.current);
                 intervaloRef.current = null;
                 setActivo(false);
+                alLlegarACero(); // ✅ Ejecutamos función cuando llega a cero
                 return 0;
             }
             return prev - 1;
@@ -243,7 +257,7 @@ export default function Contador(){
             <div className="w-full px-[8rem] flex flex-col items-center justify-center">
                 <h1 id="subTitulo" className="flex flex-row items-center justify-evenly mt-3 mb-1 text-4xl text-center mb-1">
                     <FormattedMessage id="general.tiempo" defaultMessage="Tiempo"/>
-                    {(!activo && cuentaRegresiva === 0) || isEditando && (
+                    {((!activo && cuentaRegresiva === 0 || isEditando)) && (
                         <img 
                             src={refresh}
                             onClick={reiniciarCuenta}
