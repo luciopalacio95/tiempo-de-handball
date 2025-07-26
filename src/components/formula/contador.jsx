@@ -15,7 +15,7 @@ export default function Contador(){
     const [visitanteGoles, setVisitanteGoles] = useState(0); 
     const [local, setLocal] = useState("");
     const [localGoles, setLocalGoles] = useState(0);
-    const [cuentaRegresiva, setCuentaRegresiva] = useState(Number(localStorage.getItem('duracion')) || Number(3 * 6));
+    const [cuentaRegresiva, setCuentaRegresiva] = useState(Number(localStorage.getItem('duracion')) || Number(30 * 60));
     const [activo, setActivo] = useState(false);
     const intervaloRef = useRef(null);
 
@@ -173,7 +173,7 @@ export default function Contador(){
                     />
                 </button>   
             </div>
-            <div className="w-full sm:w-5/6 mt-10 sm:mt-[5rem] flex flex-row flex-nowrap items-center justify-between m-auto mb-6">
+            <div className="w-full sm:w-5/6 mt-10 sm:mt-[5rem] flex flex-row items-center justify-between m-auto mb-6">
                 {!invertido ? (
                     <div className="basis-[40%]">
                         <input type="text" disabled={!isEditando} name="visitante" autoComplete="off" placeholder={intl.formatMessage({ id: "general.visitante" })} value={visitante} onChange={(e) => setVisitante(e.target.value)} className="bg-[#3b3b3b] uppercase text-center text-white text-base sm:text-4xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-grey dark:focus:ring-gray-100 dark:focus:border-gray-100" />
