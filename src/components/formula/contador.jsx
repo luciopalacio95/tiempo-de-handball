@@ -17,7 +17,7 @@ export default function Contador(){
     const [visitanteGoles, setVisitanteGoles] = useState(0); 
     const [local, setLocal] = useState("");
     const [localGoles, setLocalGoles] = useState(0);
-    const [cuentaRegresiva, setCuentaRegresiva] = useState(Number(localStorage.getItem('duracion')) || Number(6));
+    const [cuentaRegresiva, setCuentaRegresiva] = useState(Number(localStorage.getItem('duracion')) || Number(30 * 60));
     const [activo, setActivo] = useState(false);
     const intervaloRef = useRef(null);
 
